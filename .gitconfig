@@ -11,10 +11,13 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+
 [user]
 	name = maxfolley
-	email = maxwell.folley@genuinemade.co
+	email = maxwell@weareflavor.com
+
 [github]
 	user = maxfolley
+
 [credential]
 	helper = osxkeychain
