@@ -2,7 +2,7 @@
 
 red="\033[1;31m"
 green="\033[1;32m"
-blue="\033[1;36m"
+blue='\033[1;36m'
 
 # The cutsring is a comment used to designate the end of custom logic
 cutstring="DO NOT EDIT BELOW THIS LINE"
@@ -16,7 +16,7 @@ for name in *; do
       cutline=`grep -n -m1 "$cutstring" "$target" | sed "s/:.*//"`
       # If cutline exists in target file attempt to copy updates to the end of that file
       if [ -n "$cutline" ]; then
-        echo $green "Updating $target"
+        echo $green "Updating $target..."
         head -n $cutline "$target" > update_tmp
         startline=`sed '1!G;h;$!d' "$name" | grep -n -m1 "$cutstring" | sed "s/:.*//"`
         if [ -n "$startline" ]; then
@@ -31,7 +31,7 @@ for name in *; do
     fi
   # If symlink or file doesn't exist 
   else
-    if [ "$name" != 'install.sh' ]; then
+    if [ "$name" != 'install.sh' -a "$name" != 'README.md' ]; then
       echo $green "Creating $target"
       # If file contains cutstring, copy file to target location
       # This will allow for customization of the file outside of the repo
@@ -44,11 +44,17 @@ for name in *; do
     fi
   fi 
 done
-echo
 
+tput sgr0 
 if [ -e ~/.vim/bundle/vundle ]; then
-#  git pull ~/.vim/bundle/vundle
+  pushd ~/.vim/bundle/vundle
+  git pull origin master
+  popd
 else
   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
+
+echo $blue"Installing vim bundles..."
 vim +BundleInstall +qa
+echo $green"Dotfiles installed."
+tput sgr0 
