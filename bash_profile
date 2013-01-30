@@ -13,6 +13,9 @@ alias gl='git pull'
 alias gp='git push'
 alias githist='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
+# OPEN IOS SIMULATOR
+alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+
 # APACHE 
 alias apache="cd /Private/etc/apache2/"
 alias apache-restart="sudo apachectl -k restart"
