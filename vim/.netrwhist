@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/maxfo12/Sites/GWindow/.git/info'
-let g:netrw_dirhist_2='/Users/maxfo12/Sites/genuinemade.co/journal/2_22_2011'
-let g:netrw_dirhist_3='/Users/maxfo12/Sites/genuinemade.co'
-let g:netrw_dirhist_4='/Users/maxfo12/Sites/tcby_consumer_prototype'
-let g:netrw_dirhist_5='/Users/maxfo12/Sites/genuinemade.co'
-let g:netrw_dirhist_6='/Users/maxfo12/Sites/genuinemade.co/views/layouts'
-let g:netrw_dirhist_7='/Users/maxfo12/Sites/genuinemade.co'
