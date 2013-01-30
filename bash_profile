@@ -3,6 +3,7 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
+alias env='cd ~/Environments'
 alias repos='cd ~/Repositories'
 alias sites='cd ~/Sites'
 
