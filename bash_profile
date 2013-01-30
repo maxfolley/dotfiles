@@ -2,8 +2,9 @@ alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 alias desk='cd ~/Desktop'
+alias docs='cd ~/Documents'
 alias repos='cd ~/Repositories'
-alias sites='cd ~/sites'
+alias sites='cd ~/Sites'
 
 alias gst='git status'
 alias gc='git commit'
@@ -26,7 +27,7 @@ alias nginx-stop="sudo /usr/local/nginx/sbin/nginx -s stop"
 alias uni-start="unicorn -c config/unicorn.rb -E development -D"
 alias uni-stop="kill `cat tmp/pids/unicorn.pid`"
 
-# TRASH FLASH LOG FILE
+# TRACE FLASH LOG FILE
 alias flog="tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt"
 
 # YUI compressor
