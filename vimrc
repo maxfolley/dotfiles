@@ -122,6 +122,7 @@ autocmd GUIEnter * set visualbell t_vb=
 Bundle 'gmarik/vundle'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
+Bundle 'https://github.com/tpope/vim-surround.git'
 
 filetype plugin indent on
 

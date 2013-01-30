@@ -45,6 +45,6 @@ export PATH=${PATH}:~/android-sdk-macosx/tools
 # Java export path for jar executables
 export CLASSPATH="${CLASSPATH}:/usr/local/bin/java/*:/usr/local/bin/java"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export PATH=$PATH:/usr/local/bin
