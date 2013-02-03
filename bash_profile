@@ -52,4 +52,7 @@ export CLASSPATH="${CLASSPATH}:/usr/local/bin/java/*:/usr/local/bin/java"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# ADD NODE NPMs TO PATH
+export PATH=$PATH:/usr/local/share/npm/bin/
+
 export PATH=$PATH:/usr/local/bin

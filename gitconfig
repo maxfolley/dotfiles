@@ -21,3 +21,5 @@
 
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = /Users/maxwellfolley/.gitignore
