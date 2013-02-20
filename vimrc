@@ -123,6 +123,7 @@ Bundle 'gmarik/vundle'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
+Bundle 'https://github.com/embear/vim-localvimrc'
 
 filetype plugin indent on
 

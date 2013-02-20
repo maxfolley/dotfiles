@@ -37,6 +37,12 @@ alias flog="tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog
 # YUI compressor
 alias yui="java com.yahoo.platform.yui.compressor.Bootstrap"
 
+# Git Bash Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+PS1="\W\$(__git_ps1) \$ "
+
 # ANT
 export ANT_HOME=/usr/local/ant
 export PATH=${PATH}:${ANT_HOME}/bin
@@ -54,5 +60,8 @@ export CLASSPATH="${CLASSPATH}:/usr/local/bin/java/*:/usr/local/bin/java"
 
 # ADD NODE NPMs TO PATH
 export PATH=$PATH:/usr/local/share/npm/bin/
+
+# Postgres.app path var
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 export PATH=$PATH:/usr/local/bin
