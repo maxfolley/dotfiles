@@ -14,6 +14,9 @@ alias gl='git pull'
 alias gp='git push'
 alias githist='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
+# OPEN ANDROID EMULATOR 
+# alias android='emulator -avd androidEmulator'
+
 # OPEN IOS SIMULATOR
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
@@ -28,8 +31,8 @@ alias nginx-start="sudo /usr/local/nginx/sbin/nginx"
 alias nginx-stop="sudo /usr/local/nginx/sbin/nginx -s stop"
 
 # UNICORN
-alias uni-start="unicorn -c config/unicorn.rb -E development -D"
-alias uni-stop="kill `cat tmp/pids/unicorn.pid`"
+# alias uni-start="unicorn -c config/unicorn.rb -E development -D"
+# alias uni-stop="kill `cat tmp/pids/unicorn.pid`"
 
 # TRACE FLASH LOG FILE
 alias flog="tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt"
@@ -58,8 +61,15 @@ export CLASSPATH="${CLASSPATH}:/usr/local/bin/java/*:/usr/local/bin/java"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Run tmux in every shell
+# [[ $TERM != "screen" ]] && exec tmux
+
 # ADD NODE NPMs TO PATH
 export PATH=$PATH:/usr/local/share/npm/bin/
+
+# Android sdk 
+export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/tools
+export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/platform-tools
 
 # Postgres.app path var
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"

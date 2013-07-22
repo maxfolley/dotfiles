@@ -106,24 +106,43 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 let html_no_rendering=1
-set cursorcolumn
+"set cursorcolumn
 set showmatch
 set hlsearch 
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set t_Co=256 " 256 colors
 colorscheme molokai
+
+" move single lines
+nnoremap K ddkP
+nnoremap J ddp
+nnoremap H <<
+nnoremap L >>
+" move multiple lines
+vnoremap K xkP`[V`]
+vnoremap J xp`[V`]
+vnoremap L >gv
+vnoremap H <gv
+
+" Set the color scheme
+set t_Co=256
 
 " Disable error bells
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
+
 Bundle 'gmarik/vundle'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
-Bundle 'https://github.com/embear/vim-localvimrc'
+Bundle 'https://github.com/Lokaltog/vim-powerline.git'
+Bundle 'https://github.com/groenewege/vim-less.git'
+Bundle 'https://github.com/briancollins/vim-jst.git'
 
 filetype plugin indent on
 
