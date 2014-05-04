@@ -1,5 +1,5 @@
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+#alias mysql=/usr/local/mysql/bin/mysql
+#alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
@@ -58,6 +58,7 @@ export PATH=${PATH}:~/android-sdk-macosx/tools
 
 # Java export path for jar executables
 export CLASSPATH="${CLASSPATH}:/usr/local/bin/java/*:/usr/local/bin/java"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -71,7 +72,16 @@ export PATH=$PATH:/usr/local/share/npm/bin/
 export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/tools
 export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/platform-tools
 
+# Elastic Beanstalk CLI
+export PATH=$PATH:~/Development/AWS-ElasticBeanstalk-CLI-2.5.1/eb/linux/python2.7/
+
 # Postgres.app path var
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 export PATH=$PATH:/usr/local/bin
+
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/maxwellfolley/google-cloud-sdk/path.bash.inc
+
+# The next line enables bash completion for gcloud.
+source /Users/maxwellfolley/google-cloud-sdk/completion.bash.inc

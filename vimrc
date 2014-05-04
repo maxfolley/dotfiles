@@ -143,6 +143,8 @@ Bundle 'https://github.com/tpope/vim-surround.git'
 Bundle 'https://github.com/Lokaltog/vim-powerline.git'
 Bundle 'https://github.com/groenewege/vim-less.git'
 Bundle 'https://github.com/briancollins/vim-jst.git'
+Bundle 'https://github.com/walm/jshint.vim.git'
+Bundle 'https://github.com/wavded/vim-stylus.git'
 
 filetype plugin indent on
 
