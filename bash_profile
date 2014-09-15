@@ -1,6 +1,7 @@
 #alias mysql=/usr/local/mysql/bin/mysql
 #alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
+alias apps='cd ~/Documents/Apps'
 alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
 alias env='cd ~/Environments'
@@ -13,6 +14,10 @@ alias gco='git checkout'
 alias gl='git pull'
 alias gp='git push'
 alias githist='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+
+# show and hide hidden files
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # OPEN ANDROID EMULATOR 
 # alias android='emulator -avd androidEmulator'
