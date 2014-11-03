@@ -1,7 +1,7 @@
 #alias mysql=/usr/local/mysql/bin/mysql
 #alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
-alias apps='cd ~/Documents/Apps'
+alias apps='cd ~/Apps'
 alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
 alias env='cd ~/Environments'
@@ -46,10 +46,10 @@ alias flog="tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog
 alias yui="java com.yahoo.platform.yui.compressor.Bootstrap"
 
 # Git Bash Completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-PS1="\W\$(__git_ps1) \$ "
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#  . $(brew --prefix)/etc/bash_completion
+#  PS1="\W\$(__git_ps1) \$ "
+#fi
 
 # ANT
 export ANT_HOME=/usr/local/ant
@@ -67,6 +67,8 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+source ~/.profile
+
 # Run tmux in every shell
 # [[ $TERM != "screen" ]] && exec tmux
 
@@ -76,6 +78,9 @@ export PATH=$PATH:/usr/local/share/npm/bin/
 # Android sdk 
 export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/tools
 export PATH=${PATH}:~/Development/adt-bundle-mac/sdk/platform-tools
+
+# RabbitMQ
+export PATH=${PATH}:~/Dev/libs/rabbitmq_server-3.3.5/sbin/
 
 # Elastic Beanstalk CLI
 export PATH=$PATH:~/Development/AWS-ElasticBeanstalk-CLI-2.5.1/eb/linux/python2.7/
@@ -90,3 +95,6 @@ source /Users/maxwellfolley/google-cloud-sdk/path.bash.inc
 
 # The next line enables bash completion for gcloud.
 source /Users/maxwellfolley/google-cloud-sdk/completion.bash.inc
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

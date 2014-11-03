@@ -55,6 +55,6 @@ else
 fi
 
 echo $blue"Installing vim bundles..."
-vim +BundleInstall +qa
+vim +PluginInstall +qall
 echo $green"Dotfiles installed."
 tput sgr0 
