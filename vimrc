@@ -95,7 +95,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -112,7 +111,10 @@ set hlsearch
 set expandtab
 set tabstop=2
 set shiftwidth=2
-colorscheme molokai
+
+"syntax enable
+set background=dark 
+colorscheme discopants 
 
 " move single lines
 nnoremap K ddkP
@@ -128,24 +130,29 @@ vnoremap H <gv
 " Set the color scheme
 set t_Co=256
 
+hi StatusLine ctermbg=red
+
 " Disable error bells
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-set laststatus=2   " Always show the statusline
+set laststatus=0   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols = 'fancy'
 
-Bundle 'gmarik/vundle'
-Bundle 'https://github.com/scrooloose/nerdtree.git'
-Bundle 'https://github.com/kchmck/vim-coffee-script.git'
-Bundle 'https://github.com/tpope/vim-surround.git'
-Bundle 'https://github.com/Lokaltog/vim-powerline.git'
-Bundle 'https://github.com/groenewege/vim-less.git'
-Bundle 'https://github.com/briancollins/vim-jst.git'
-Bundle 'https://github.com/walm/jshint.vim.git'
-Bundle 'https://github.com/wavded/vim-stylus.git'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/vundle'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/kchmck/vim-coffee-script.git'
+Plugin 'https://github.com/tpope/vim-surround.git'
+Plugin 'https://github.com/groenewege/vim-less.git'
+Plugin 'https://github.com/briancollins/vim-jst.git'
+Plugin 'https://github.com/walm/jshint.vim.git'
+Plugin 'https://github.com/wavded/vim-stylus.git'
+Plugin 'https://github.com/wting/rust.vim.git'
+
+call vundle#end()
 filetype plugin indent on
 
 autocmd VimEnter * NERDTree
