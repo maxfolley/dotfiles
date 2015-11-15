@@ -71,6 +71,8 @@ source ~/.profile
 
 # Run tmux in every shell
 # [[ $TERM != "screen" ]] && exec tmux
+# Fix tmux color scheme on linux
+alias tmux="TERM=screen-256color-bce tmux"
 
 # ADD NODE NPMs TO PATH
 export PATH=$PATH:/usr/local/share/npm/bin/
