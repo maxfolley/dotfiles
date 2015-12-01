@@ -100,7 +100,7 @@ set shiftwidth=2
 
 "syntax enable
 set background=dark 
-colorscheme discopants 
+colorscheme colorsbox-stnight 
 
 " move single lines
 nnoremap K ddkP
