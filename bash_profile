@@ -71,6 +71,8 @@ source ~/.profile
 
 # Run tmux in every shell
 # [[ $TERM != "screen" ]] && exec tmux
+# Fix tmux color scheme on linux
+alias tmux="TERM=screen-256color-bce tmux"
 
 # ADD NODE NPMs TO PATH
 export PATH=$PATH:/usr/local/share/npm/bin/
@@ -89,12 +91,6 @@ export PATH=$PATH:~/Development/AWS-ElasticBeanstalk-CLI-2.5.1/eb/linux/python2.
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 export PATH=$PATH:/usr/local/bin
-
-# The next line updates PATH for the Google Cloud SDK.
-source /Users/maxwellfolley/google-cloud-sdk/path.bash.inc
-
-# The next line enables bash completion for gcloud.
-source /Users/maxwellfolley/google-cloud-sdk/completion.bash.inc
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
