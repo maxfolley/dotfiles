@@ -3,6 +3,10 @@
 	status = auto
 	branch = auto
 
+[user]
+	name = mfolley3
+	email = maxwell.folley@gmail.com
+
 [alias]
   co = checkout
   ci = commit
@@ -12,14 +16,16 @@
   type = cat-file -t
   dump = cat-file -p
 
-[user]
-	name = maxfolley
-	email = maxwell@weareflavor.com
-
 [github]
 	user = maxfolley
 
 [credential]
 	helper = osxkeychain
+
 [core]
 	excludesfile = /Users/maxwellfolley/.gitignore
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
