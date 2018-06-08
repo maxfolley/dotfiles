@@ -95,7 +95,7 @@ let html_no_rendering=1
 set showmatch
 set hlsearch 
 set expandtab
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 
 "syntax enable
